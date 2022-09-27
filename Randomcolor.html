@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Randomcolor.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="box1">
+            <!-- <h1 id="text"></h1> -->
+            <button id="click" onclick="getnew_color()">Take new color</button>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+
+    function getnew_color() {
+        let x = Math.floor(Math.random() * 25);
+        let y = Math.floor(Math.random() * 252);
+        let z = Math.floor(Math.random() * 258);
+        let bg_color = "rgb(" + x + "," + y + "," + z + ")";
+        console.log(bg_color);
+        // document.getElementById("text").textContent = bg_color;
+        document.getElementById("box1").style.background = bg_color;
+    }
+
+</script>
+
+
+</html>
